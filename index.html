@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Name of yur theme -->
+  <title>Rotk Theme</title>
+
+<!--
+  <palette class="palette-default" name="Default" preview="#ffffff,#222222">
+-->
+
+  <!-- Add any styles your theme requires here -->
+  <link rel="stylesheet/less" type="text/css" href="styles/main.less">
+  
+  <!-- This script loads the Populr theming engine. Populr will automatically remove it at runtime. -->
+  
+  <script src="http://populr.me/assets/developers/themer.js"></script>
+  
+  <!-- Add any javscript your theme requires here -->
+  
+  <script type="text/javascript" src="js/easySlider1.7.js"></script>
+  
+  <script src="js/main.js"></script>
+
+ </head> 
+ <body>
+  <!-- Put your theme's HTML inside this script tag. The script tag will 
+       prevent issues with quote escaping and invalid markup. -->
+  
+  <script id="theme" type="text/x-handlebars-template">
+            
+    {{{ title }}}  
+      
+    {{#region "columnizer" id="rotkSlider" max_auto_assets="0" max_cols="1" dummy_content="I-1|I-1|I-1|I-1"}}
+    
+            <div class="rotkSliderNext"></div>
+            <div class="rotkSliderPrev"></div>
+            <div class="loadi"></div>
+            {{#asset "imagegroup" size="1"}}
+                <div class="content">
+                    {{#images}}
+                        <img src="{{{resize original_url width="190" height="0"}}}" alt="{{title}}" />
+                    {{/images}}
+                </div>
+                <div class="coolText">
+                    {{{title}}}
+                    {{{title}}
+                </div>
+           {{/asset}}
+       
+            {{#asset "text" size="1"}}
+                {{{title}}}
+                <div class="content">
+                    {{{body}}}
+                </div>
+            {{/asset}}
+            
+            {{#asset "videogroup" size="1"}}
+                {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+ 
+            {{#asset "documentgroup" size="1"}}
+                {{{title}}}
+                {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+            {{/asset}}
+            
+            {{#asset "embedgroup" size="1" width="400"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+       
+        
+    {{/region}}
+    
+    
+    {{#region "columnizer" id="main-contentz" max_auto_assets="0" max_cols="4" dummy_content="I-1,I-1,I-1,I-1"}}
+        
+        
+      {{#asset "imagegroup" size="1"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="960" height="720"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+ 
+      {{#asset "imagegroup" size="2"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="470" height="353"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+      {{#asset "imagegroup" size="3"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="307" height="230"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+       {{#asset "text" size="1"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="2"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="3"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="4"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+        {{#asset "videogroup" size="1"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="2"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="3"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="4"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+         {{#asset "documentgroup" size="1"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="2"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="3"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="4"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+
+         {{#asset "embedgroup" size="1" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="2" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="3" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="4" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        
+    
+    
+    
+        {{#asset "imagegroup" size="4"}}
+        
+            <div class="content">
+                {{#images}}
+                    <img src="{{{resize original_url width="190" height="0"}}}" alt="{{title}}" />
+                {{/images}}
+            </div>
+            
+            {{{title}}}
+            {{{description}}}
+        
+       {{/asset}}
+       
+       
+       
+    {{/region}}
+                 
+    <div class="whatTheFuck">
+        <div id="slider-t">
+            <ul>
+                <li>
+                    
+                    {{#region "columnizer" id="main-contentzz2" max_auto_assets="0" max_cols="3" dummy_content="I-1,I-1,I-1"}}
+                     
+                    {{#asset "imagegroup" size="1"}}
+                        {{{title}}}
+                        <div class="content">
+                            {{{imageslider images width="960" height="720"}}}
+                        </div>
+                        {{{description}}}
+                    {{/asset}}
+ 
+                    {{#asset "imagegroup" size="2"}}
+                        {{{title}}}
+                        <div class="content">
+                            {{{imageslider images width="470" height="353"}}}
+                        </div>
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "imagegroup" size="3"}}
+
+                        <div class="content">
+                            {{#images}}
+                                <img src="{{{resize original_url width="190" height="0"}}}" alt="{{title}}" />
+                            {{/images}}
+                        </div>
+
+                        {{{title}}}
+                        {{{description}}}
+
+                    {{/asset}}
+
+                    {{#asset "text" size="1"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+       
+                    {{#asset "text" size="2"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+       
+                    {{#asset "text" size="3"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+                    {{#asset "videogroup" size="1"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+        
+                    {{#asset "videogroup" size="2"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "videogroup" size="3"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+                             
+                    {{#asset "embedgroup" size="1" width="400"}}
+                        {{#embeds}}
+                        <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                            {{{title}}}
+                            {{{description}}}
+                    {{/asset}}
+        
+                    {{#asset "embedgroup" size="2" width="400"}}
+                        {{#embeds}}
+                            <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "embedgroup" size="3" width="400"}}
+                        {{#embeds}}
+                            <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+                   
+                   {{#asset "documentgroup" size="1"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                                <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                    {{/asset}}
+         
+                     {{#asset "documentgroup" size="2"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                            <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                     {{/asset}}
+
+                     {{#asset "documentgroup" size="3"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                            <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                     {{/asset}}
+                   
+
+                {{/region}}
+                                </li>
+                            <li>
+                            {{#region "columnizer" id="main-contentzz3" max_auto_assets="0" max_cols="3" dummy_content="I-1,I-1,I-1"}}
+
+
+                    {{#asset "imagegroup" size="1"}}
+                        {{{title}}}
+                        <div class="content">
+                            {{{imageslider images width="960" height="720"}}}
+                        </div>
+                        {{{description}}}
+                    {{/asset}}
+ 
+                    {{#asset "imagegroup" size="2"}}
+                        {{{title}}}
+                        <div class="content">
+                            {{{imageslider images width="470" height="353"}}}
+                        </div>
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "imagegroup" size="3"}}
+
+                        <div class="content">
+                            {{#images}}
+                                <img src="{{{resize original_url width="190" height="0"}}}" alt="{{title}}" />
+                            {{/images}}
+                        </div>
+
+                        {{{title}}}
+                        {{{description}}}
+
+                    {{/asset}}
+
+                    {{#asset "text" size="1"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+       
+                    {{#asset "text" size="2"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+       
+                    {{#asset "text" size="3"}}
+                        {{{title}}}
+                        {{{body}}}
+                    {{/asset}}
+                    {{#asset "videogroup" size="1"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+        
+                    {{#asset "videogroup" size="2"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "videogroup" size="3"}}
+                        {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+                             
+                    {{#asset "embedgroup" size="1" width="400"}}
+                        {{#embeds}}
+                        <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                            {{{title}}}
+                            {{{description}}}
+                    {{/asset}}
+        
+                    {{#asset "embedgroup" size="2" width="400"}}
+                        {{#embeds}}
+                            <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+
+                    {{#asset "embedgroup" size="3" width="400"}}
+                        {{#embeds}}
+                            <div class="embed">{{{html}}}</div>
+                        {{/embeds}}
+                        {{{title}}}
+                        {{{description}}}
+                    {{/asset}}
+                   
+                   {{#asset "documentgroup" size="1"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                                <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                    {{/asset}}
+         
+                     {{#asset "documentgroup" size="2"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                            <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                     {{/asset}}
+
+                     {{#asset "documentgroup" size="3"}}
+                        {{{title}}}
+                        {{{description}}}
+                        <ul>
+                            {{#documents}}
+                            <li><a href="{{original_url}}">{{title}}</a></li>
+                            {{/documents}}
+                        </ul>
+                     {{/asset}}
+                     </li>
+                     </ul>
+                </div>
+                </div>
+    {{/region}}
+    
+    {{#region "columnizer" id="aboveFooter" max_auto_assets="0" max_cols="4" dummy_content="T-4,T-4,T-4,T-4"}}
+    
+    
+       {{#asset "imagegroup" size="1"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="960" height="720"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+ 
+      {{#asset "imagegroup" size="2"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="470" height="353"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+      {{#asset "imagegroup" size="3"}}
+        {{{title}}}
+        <div class="content">
+          {{{imageslider images width="307" height="230"}}}
+        </div>
+        {{{description}}}
+      {{/asset}}
+  
+       {{#asset "text" size="1"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="2"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="3"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+       {{#asset "text" size="4"}}
+            {{{title}}}
+            {{{body}}}
+       {{/asset}}
+       
+        {{#asset "videogroup" size="1"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="2"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="3"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "videogroup" size="4"}}
+            {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+         {{#asset "documentgroup" size="1"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="2"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="3"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+         
+         {{#asset "documentgroup" size="4"}}
+            {{{title}}}
+            {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+         {{/asset}}
+
+         {{#asset "embedgroup" size="1" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="2" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="3" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        {{#asset "embedgroup" size="4" width="400"}}
+            {{#embeds}}
+                <div class="embed">{{{html}}}</div>
+            {{/embeds}}
+            {{{title}}}
+            {{{description}}}
+        {{/asset}}
+        
+        
+    
+    
+    
+        {{#asset "imagegroup" size="4"}}
+        
+            <div class="content">
+                {{#images}}
+                    <img src="{{{resize original_url width="190" height="0"}}}" alt="{{title}}" />
+                {{/images}}
+            </div>
+            
+            {{{title}}}
+            {{{description}}}
+        
+       {{/asset}}
+       
+    {{/region}}
+        
+    
+    {{#region "columnizer" id="footer" max_auto_assets="0" max_cols="1" dummy_content="T-4"}}
+    
+    
+            {{#asset "text" size="1"}}
+                {{{title}}}
+                <div class="content">
+                    {{{body}}}
+                </div>
+            {{/asset}}
+            
+             {{#asset "imagegroup" size="1"}}
+                {{{imageslider images width="400" height="300"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+            
+            {{#asset "videogroup" size="1"}}
+                {{{videoplayer videos width="400" height="300" resolution="medium"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+ 
+            {{#asset "documentgroup" size="1"}}
+                {{{title}}}
+                {{{description}}}
+            <ul>
+                {{#documents}}
+                <li><a href="{{original_url}}">{{title}}</a></li>
+                {{/documents}}
+            </ul>
+            {{/asset}}
+            
+            {{#asset "embedgroup" size="1" width="400"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+    {{/region}}
+</script>
+
+<script src="js/jquery-2.0.0.min.js"></script>
+<script src="js/skrollr.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript">
+
+
+$.noConflict();
+
+  var t= window.setInterval(function(){
+    window.clearInterval(t);
+    $("#slider-t").easySlider({
+                auto: false, 
+                continuous:false,
+                nextText: '',
+                prevText: ''
+            });
+    ( function($) {
+    // we can now rely on $ within the safety of our “bodyguard” function
+    $(document).ready( function() { 
+             
+             
+              } );
+} ) ( jQuery );         
+},3000);
+
+
+</script>
+
+</body>
+</html>
